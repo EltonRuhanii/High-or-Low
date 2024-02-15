@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D8325BD32B72672B00877BE5 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8325BD12B72672B00877BE5 /* UserData.xcdatamodeld */; };
+		D843FECE2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D843FECD2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift */; };
+		D84E95DF2B7D0DEB003A426E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84E95DE2B7D0DEB003A426E /* LoginViewController.swift */; };
 		D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */; };
 		D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */; };
 		D86EFE852B626A3200D2A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86EFE842B626A3200D2A4AE /* Assets.xcassets */; };
@@ -28,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		D8325BD22B72672B00877BE5 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		D843FECD2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+HelperFunctions.swift"; sourceTree = "<group>"; };
+		D84E95DE2B7D0DEB003A426E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D84E95E22B7D13DD003A426E /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
 		D86EFE782B626A2B00D2A4AE /* High or Low.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High or Low.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +64,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D843FECC2B7E1F0B0008702C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D843FECD2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D84E95E02B7D0DF7003A426E /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D84E95DE2B7D0DEB003A426E /* LoginViewController.swift */,
+				D843FECC2B7E1F0B0008702C /* Extensions */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		D84E95E12B7D1387003A426E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D84E95E22B7D13DD003A426E /* JosefinSans.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D86EFE6F2B626A2B00D2A4AE = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +170,7 @@
 		D8B4FC5E2B7B5D9D0024EAAB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D84E95E02B7D0DF7003A426E /* LoginViewController */,
 				D89EB4652B761C850052D430 /* BetViewController */,
 				D89EB46B2B76241C0052D430 /* HomeViewController */,
 			);
@@ -159,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				D86EFE842B626A3200D2A4AE /* Assets.xcassets */,
+				D84E95E12B7D1387003A426E /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -241,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D843FECE2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift in Sources */,
 				D89EB4702B7626490052D430 /* GameViewController+UIElements.swift in Sources */,
 				D8325BD32B72672B00877BE5 /* UserData.xcdatamodeld in Sources */,
 				D89EB4672B761D510052D430 /* BetViewController+Functions.swift in Sources */,
@@ -254,6 +287,7 @@
 				D886698A2B7A67FD007CED3E /* GameViewController.swift in Sources */,
 				D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */,
 				D89EB4642B761C800052D430 /* BetViewController+UIElements.swift in Sources */,
+				D84E95DF2B7D0DEB003A426E /* LoginViewController.swift in Sources */,
 				D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */,
 				D8B4FC642B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift in Sources */,
 				D89EB4692B761D8D0052D430 /* BetViewController+HelperFunctions.swift in Sources */,
