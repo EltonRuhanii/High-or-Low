@@ -11,6 +11,7 @@ extension HighLowViewController {
     func appendElements() {
         higherButton.addTarget(self, action: #selector(higherPressed), for: .touchUpInside)
         lowerButton.addTarget(self, action: #selector(lowerPressed), for: .touchUpInside)
+        betButton.addTarget(self, action: #selector(betButtonPressed), for: .touchUpInside)
         view.addSubview(holderView)
         view.addSubview(navbar)
         navbar.addSubview(logo)
@@ -23,6 +24,13 @@ extension HighLowViewController {
         profitHolder.addSubview(totalProfitLabel)
         profitHolder.addSubview(profitHolderTwo)
         profitHolderTwo.addSubview(profitLabel)
+        view.addSubview(bottomView)
+        bottomView.addSubview(betAmountLabel)
+        bottomView.addSubview(betAmountView)
+        betAmountView.addSubview(betAmountTF)
+        betAmountView.addSubview(halfbetButton)
+        betAmountView.addSubview(maxbetButton)
+        bottomView.addSubview(betButton)
     }
     
     func setupConstraints() {
@@ -93,6 +101,44 @@ extension HighLowViewController {
             
             profitHolder.bottomAnchor.constraint(equalTo: profitHolderTwo.bottomAnchor, constant: 12),
             holderView.bottomAnchor.constraint(equalTo: profitHolder.bottomAnchor, constant: 24),
+        ])
+        
+        NSLayoutConstraint.activate([
+            bottomView.topAnchor.constraint(equalTo: holderView.bottomAnchor, constant: -15),
+            bottomView.leadingAnchor.constraint(equalTo: holderView.leadingAnchor),
+            bottomView.trailingAnchor.constraint(equalTo: holderView.trailingAnchor),
+            
+            betAmountLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 12),
+            betAmountLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -12),
+            betAmountLabel.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 12),
+            
+            betAmountView.topAnchor.constraint(equalTo: betAmountLabel.bottomAnchor, constant: 12),
+            betAmountView.leadingAnchor.constraint(equalTo: betAmountLabel.leadingAnchor),
+            betAmountView.trailingAnchor.constraint(equalTo: betAmountLabel.trailingAnchor),
+            betAmountView.heightAnchor.constraint(equalToConstant: 40),
+            
+            betAmountTF.topAnchor.constraint(equalTo: betAmountView.topAnchor, constant: 2),
+            betAmountTF.leadingAnchor.constraint(equalTo: betAmountView.leadingAnchor, constant: 2),
+            betAmountTF.trailingAnchor.constraint(equalTo: halfbetButton.leadingAnchor, constant: -2),
+            betAmountTF.bottomAnchor.constraint(equalTo: betAmountView.bottomAnchor, constant: -2),
+            
+            maxbetButton.topAnchor.constraint(equalTo: betAmountView.topAnchor),
+            maxbetButton.trailingAnchor.constraint(equalTo: betAmountView.trailingAnchor),
+            maxbetButton.bottomAnchor.constraint(equalTo: betAmountView.bottomAnchor),
+            maxbetButton.widthAnchor.constraint(equalToConstant: 60),
+            
+            halfbetButton.topAnchor.constraint(equalTo: maxbetButton.topAnchor),
+            halfbetButton.trailingAnchor.constraint(equalTo: maxbetButton.leadingAnchor),
+            halfbetButton.bottomAnchor.constraint(equalTo: maxbetButton.bottomAnchor),
+            halfbetButton.widthAnchor.constraint(equalTo: maxbetButton.widthAnchor),
+            
+            betButton.topAnchor.constraint(equalTo: betAmountView.bottomAnchor, constant: 12),
+            betButton.leadingAnchor.constraint(equalTo: betAmountLabel.leadingAnchor),
+            betButton.trailingAnchor.constraint(equalTo: betAmountLabel.trailingAnchor),
+            betButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            bottomView.bottomAnchor.constraint(equalTo: betButton.bottomAnchor, constant: 12),
+            
         ])
     }
 }

@@ -12,13 +12,9 @@ class HighLowViewController: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .backgroundColor
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.5
-        view.layer.shadowOffset = CGSize(width: 0, height: 4)
-        view.layer.shadowRadius = 4
+        view.applyShadow()
         return view
     }()
-    
     let logo: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +22,6 @@ class HighLowViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 22)
         return label
     }()
-    
     let moneyHolder: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -34,12 +29,11 @@ class HighLowViewController: UIViewController {
         view.layer.cornerRadius = 5
         return view
     }()
-    
     let moneyLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "$ 250.00"
+        label.text = "$ \(userOne.moneyAmount)"
         return label
     }()
     
@@ -100,10 +94,76 @@ class HighLowViewController: UIViewController {
     }()
     let profitLabel: UILabel = {
         let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "0.000000"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .white
         return label
+    }()
+    
+    let bottomView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .secondaryColor
+        view.layer.cornerRadius = 15
+        view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        return view
+    }()
+    let betAmountLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Bet Amount"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .textColor
+        return label
+    }()
+    let betAmountView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 5
+        view.backgroundColor = .secondaryColor
+        view.applyShadow()
+        return view
+    }()
+    let betAmountTF: UITextField = {
+        let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        textfield.borderStyle = .none
+        textfield.keyboardType = .numberPad
+        textfield.backgroundColor = .primaryColor
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textfield.frame.size.height))
+        textfield.leftView = paddingView
+        textfield.leftViewMode = .always
+        return textfield
+    }()
+    let halfbetButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("1/2", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
+        button.backgroundColor = .secondaryColor
+        return button
+    }()
+    let maxbetButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Max", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
+        button.backgroundColor = .secondaryColor
+        button.layer.cornerRadius = 5
+        button.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        return button
+    }()
+    let betButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Bet", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.setTitleColor(.backgroundColor, for: .normal)
+        button.layer.cornerRadius = 5
+        button.backgroundColor = UIColor(red: 0.00, green: 0.91, blue: 0.00, alpha: 1.00)
+        return button
     }()
     
     // MARK: - Variables
@@ -113,7 +173,8 @@ class HighLowViewController: UIViewController {
     var newNumber: Int = 0
     var higherGuess: Bool = true
     var multiplier: Double = 1.0
-    var betAmount: Double =  1
+    var betAmount: Double =  0
+    var isPlaying: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,8 +182,16 @@ class HighLowViewController: UIViewController {
         appendElements()
         setupConstraints()
         getNewNumber()
-        profitLabel.text = "Hello"
+        handleIsPlaying()
+        
     }
-    
 }
 
+extension UIView {
+    func applyShadow() {
+            layer.shadowColor = UIColor.black.cgColor
+            layer.shadowOpacity = 0.5
+            layer.shadowOffset = CGSize(width: 0, height: 4)
+            layer.shadowRadius = 4
+        }
+}
