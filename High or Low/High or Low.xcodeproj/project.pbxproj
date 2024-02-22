@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8325BD32B72672B00877BE5 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8325BD12B72672B00877BE5 /* UserData.xcdatamodeld */; };
 		D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */; };
 		D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABE2B8769F30008D7EE /* CardsCell.swift */; };
 		D8372AC22B879A9F0008D7EE /* HighLowViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */; };
@@ -26,15 +25,12 @@
 		D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */; };
 		D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */; };
 		D8AAC0F12B7F9430002B9A56 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AAC0F02B7F9430002B9A56 /* Colors.xcassets */; };
-		D8B4FC632B7B96D00024EAAB /* UsersInformation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4FC612B7B96D00024EAAB /* UsersInformation+CoreDataClass.swift */; };
-		D8B4FC642B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4FC622B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift */; };
 		D8B4FC672B7B97E80024EAAB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */; };
 		D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE66472B73AF6300D0E4EC /* UserModel.swift */; };
 		D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE66492B73B50500D0E4EC /* UserDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D8325BD22B72672B00877BE5 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbailtyModel.swift; sourceTree = "<group>"; };
 		D8372ABE2B8769F30008D7EE /* CardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCell.swift; sourceTree = "<group>"; };
 		D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -56,8 +52,6 @@
 		D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+Functions.swift"; sourceTree = "<group>"; };
 		D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+UIElements.swift"; sourceTree = "<group>"; };
 		D8AAC0F02B7F9430002B9A56 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		D8B4FC612B7B96D00024EAAB /* UsersInformation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersInformation+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D8B4FC622B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersInformation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D8CE66472B73AF6300D0E4EC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D8CE66492B73B50500D0E4EC /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
@@ -122,7 +116,6 @@
 		D86EFE7A2B626A2B00D2A4AE /* High or Low */ = {
 			isa = PBXGroup;
 			children = (
-				D8B4FC652B7B96DD0024EAAB /* UserInformation */,
 				D8B4FC5D2B7B5D870024EAAB /* Model */,
 				D8B4FC5E2B7B5D9D0024EAAB /* View Controllers */,
 				D8B4FC602B7B95ED0024EAAB /* Resources */,
@@ -131,7 +124,6 @@
 				D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */,
 				D8CE66492B73B50500D0E4EC /* UserDatabase.swift */,
 				D86EFE892B626A3200D2A4AE /* Info.plist */,
-				D8325BD12B72672B00877BE5 /* UserData.xcdatamodeld */,
 			);
 			path = "High or Low";
 			sourceTree = "<group>";
@@ -210,15 +202,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D8B4FC652B7B96DD0024EAAB /* UserInformation */ = {
-			isa = PBXGroup;
-			children = (
-				D8B4FC612B7B96D00024EAAB /* UsersInformation+CoreDataClass.swift */,
-				D8B4FC622B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift */,
-			);
-			path = UserInformation;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,21 +277,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8372AC22B879A9F0008D7EE /* HighLowViewController+CollectionView.swift in Sources */,
-				D8325BD32B72672B00877BE5 /* UserData.xcdatamodeld in Sources */,
 				D89B380D2B864BBC00AEFC34 /* UIViewController+Extensions.swift in Sources */,
 				D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */,
 				D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */,
 				D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */,
 				D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */,
 				D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */,
-				D8B4FC632B7B96D00024EAAB /* UsersInformation+CoreDataClass.swift in Sources */,
 				D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */,
 				D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */,
 				D8B4FC672B7B97E80024EAAB /* CoreDataStack.swift in Sources */,
 				D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */,
 				D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */,
 				D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */,
-				D8B4FC642B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift in Sources */,
 				D8AAC0EA2B7F5D4B002B9A56 /* HighLowViewController.swift in Sources */,
 				D89B380F2B864BD700AEFC34 /* UIView+Extension.swift in Sources */,
 			);
@@ -522,19 +502,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D8325BD12B72672B00877BE5 /* UserData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D8325BD22B72672B00877BE5 /* UserData.xcdatamodel */,
-			);
-			currentVersion = D8325BD22B72672B00877BE5 /* UserData.xcdatamodel */;
-			path = UserData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D86EFE702B626A2B00D2A4AE /* Project object */;
 }
