@@ -248,6 +248,7 @@ class HighLowViewController: UIViewController {
     var betAmount: Double =  0
     var isPlaying: Bool = false
     
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -263,28 +264,5 @@ class HighLowViewController: UIViewController {
         view.addGestureRecognizer(tapGestureRecognizer)
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-    }
-}
-
-extension HighLowViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cardsArray.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardsCell.identifier, for: indexPath) as? CardsCell else {
-            fatalError("Failed to dequeue CardsCell in View Controller")
-        }
-        
-        let image = self.cardsArray[indexPath.row]
-        cell.configure(with: UIImage(named: "\(image)") ?? UIImage(systemName: "questionmark")!)
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = 70
-        let width = 50
-        return CGSize(width: width, height: height)
     }
 }

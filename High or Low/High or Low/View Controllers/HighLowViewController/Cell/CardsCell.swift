@@ -33,8 +33,6 @@ class CardsCell: UICollectionViewCell {
             cardImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             cardImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             cardImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-//            cardImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-//            cardImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
     }
 }
