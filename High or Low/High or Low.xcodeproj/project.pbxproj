@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		D8325BD32B72672B00877BE5 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8325BD12B72672B00877BE5 /* UserData.xcdatamodeld */; };
-		D843FECE2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D843FECD2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift */; };
-		D84E95DF2B7D0DEB003A426E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84E95DE2B7D0DEB003A426E /* LoginViewController.swift */; };
+		D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */; };
+		D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABE2B8769F30008D7EE /* CardsCell.swift */; };
 		D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */; };
 		D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */; };
 		D86EFE852B626A3200D2A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86EFE842B626A3200D2A4AE /* Assets.xcassets */; };
-		D88669882B7A66D2007CED3E /* BetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88669872B7A66D2007CED3E /* BetViewController.swift */; };
-		D886698A2B7A67FD007CED3E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88669892B7A67FD007CED3E /* GameViewController.swift */; };
-		D89EB4642B761C800052D430 /* BetViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EB4632B761C800052D430 /* BetViewController+UIElements.swift */; };
-		D89EB4672B761D510052D430 /* BetViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EB4662B761D510052D430 /* BetViewController+Functions.swift */; };
-		D89EB4692B761D8D0052D430 /* BetViewController+HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EB4682B761D8D0052D430 /* BetViewController+HelperFunctions.swift */; };
-		D89EB46E2B7624480052D430 /* GameViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EB46D2B7624480052D430 /* GameViewController+Functions.swift */; };
-		D89EB4702B7626490052D430 /* GameViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EB46F2B7626490052D430 /* GameViewController+UIElements.swift */; };
-		D89EB4762B7655BE0052D430 /* GameViewController+HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EB4752B7655BE0052D430 /* GameViewController+HelperFunctions.swift */; };
+		D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */; };
+		D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */; };
+		D89B38042B86211B00AEFC34 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38032B86211A00AEFC34 /* Fredoka.ttf */; };
+		D89B38062B8621E800AEFC34 /* Fredoka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38052B8621E800AEFC34 /* Fredoka-Bold.ttf */; };
+		D89B38082B86280B00AEFC34 /* Medinah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38072B86280A00AEFC34 /* Medinah.ttf */; };
+		D89B380B2B86295200AEFC34 /* MavenPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B380A2B86295200AEFC34 /* MavenPro.ttf */; };
+		D89B380D2B864BBC00AEFC34 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B380C2B864BBC00AEFC34 /* UIViewController+Extensions.swift */; };
+		D89B380F2B864BD700AEFC34 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B380E2B864BD700AEFC34 /* UIView+Extension.swift */; };
 		D8AAC0EA2B7F5D4B002B9A56 /* HighLowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0E92B7F5D4B002B9A56 /* HighLowViewController.swift */; };
 		D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */; };
 		D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */; };
@@ -34,22 +34,22 @@
 
 /* Begin PBXFileReference section */
 		D8325BD22B72672B00877BE5 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
-		D843FECD2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+HelperFunctions.swift"; sourceTree = "<group>"; };
-		D84E95DE2B7D0DEB003A426E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbailtyModel.swift; sourceTree = "<group>"; };
+		D8372ABE2B8769F30008D7EE /* CardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCell.swift; sourceTree = "<group>"; };
 		D84E95E22B7D13DD003A426E /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
 		D86EFE782B626A2B00D2A4AE /* High or Low.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High or Low.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D86EFE842B626A3200D2A4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D86EFE892B626A3200D2A4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D88669872B7A66D2007CED3E /* BetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetViewController.swift; sourceTree = "<group>"; };
-		D88669892B7A67FD007CED3E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		D89EB4632B761C800052D430 /* BetViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BetViewController+UIElements.swift"; sourceTree = "<group>"; };
-		D89EB4662B761D510052D430 /* BetViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BetViewController+Functions.swift"; sourceTree = "<group>"; };
-		D89EB4682B761D8D0052D430 /* BetViewController+HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BetViewController+HelperFunctions.swift"; sourceTree = "<group>"; };
-		D89EB46D2B7624480052D430 /* GameViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+Functions.swift"; sourceTree = "<group>"; };
-		D89EB46F2B7626490052D430 /* GameViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+UIElements.swift"; sourceTree = "<group>"; };
-		D89EB4752B7655BE0052D430 /* GameViewController+HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+HelperFunctions.swift"; sourceTree = "<group>"; };
+		D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+UIElements.swift"; sourceTree = "<group>"; };
+		D89B38032B86211A00AEFC34 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
+		D89B38052B8621E800AEFC34 /* Fredoka-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fredoka-Bold.ttf"; sourceTree = "<group>"; };
+		D89B38072B86280A00AEFC34 /* Medinah.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Medinah.ttf; sourceTree = "<group>"; };
+		D89B380A2B86295200AEFC34 /* MavenPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MavenPro.ttf; sourceTree = "<group>"; };
+		D89B380C2B864BBC00AEFC34 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		D89B380E2B864BD700AEFC34 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D8AAC0E92B7F5D4B002B9A56 /* HighLowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighLowViewController.swift; sourceTree = "<group>"; };
 		D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+Functions.swift"; sourceTree = "<group>"; };
 		D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+UIElements.swift"; sourceTree = "<group>"; };
@@ -72,26 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D843FECC2B7E1F0B0008702C /* Extensions */ = {
+		D8372ABB2B87416A0008D7EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D843FECD2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift */,
+				D89B380C2B864BBC00AEFC34 /* UIViewController+Extensions.swift */,
+				D89B380E2B864BD700AEFC34 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D84E95E02B7D0DF7003A426E /* LoginViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D84E95DE2B7D0DEB003A426E /* LoginViewController.swift */,
-				D843FECC2B7E1F0B0008702C /* Extensions */,
-			);
-			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		D84E95E12B7D1387003A426E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D89B38072B86280A00AEFC34 /* Medinah.ttf */,
+				D89B380A2B86295200AEFC34 /* MavenPro.ttf */,
+				D89B38052B8621E800AEFC34 /* Fredoka-Bold.ttf */,
+				D89B38032B86211A00AEFC34 /* Fredoka.ttf */,
 				D84E95E22B7D13DD003A426E /* JosefinSans.ttf */,
 			);
 			path = Fonts;
@@ -121,6 +117,7 @@
 				D8B4FC5E2B7B5D9D0024EAAB /* View Controllers */,
 				D8B4FC602B7B95ED0024EAAB /* Resources */,
 				D8B4FC5F2B7B95CA0024EAAB /* Supporting Files */,
+				D8372ABB2B87416A0008D7EE /* Extensions */,
 				D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */,
 				D8CE66492B73B50500D0E4EC /* UserDatabase.swift */,
 				D86EFE892B626A3200D2A4AE /* Info.plist */,
@@ -129,47 +126,27 @@
 			path = "High or Low";
 			sourceTree = "<group>";
 		};
-		D89EB4652B761C850052D430 /* BetViewController */ = {
+		D89B37FD2B84F5DE00AEFC34 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D88669872B7A66D2007CED3E /* BetViewController.swift */,
-				D89EB46A2B761F350052D430 /* Extension */,
+				D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */,
+				D89B38002B84FE8D00AEFC34 /* Extensions */,
 			);
-			path = BetViewController;
+			path = ProfileViewController;
 			sourceTree = "<group>";
 		};
-		D89EB46A2B761F350052D430 /* Extension */ = {
+		D89B38002B84FE8D00AEFC34 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D89EB4632B761C800052D430 /* BetViewController+UIElements.swift */,
-				D89EB4662B761D510052D430 /* BetViewController+Functions.swift */,
-				D89EB4682B761D8D0052D430 /* BetViewController+HelperFunctions.swift */,
+				D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */,
 			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		D89EB46B2B76241C0052D430 /* HomeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D88669892B7A67FD007CED3E /* GameViewController.swift */,
-				D89EB46C2B76242B0052D430 /* Extension */,
-			);
-			path = HomeViewController;
-			sourceTree = "<group>";
-		};
-		D89EB46C2B76242B0052D430 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				D89EB46D2B7624480052D430 /* GameViewController+Functions.swift */,
-				D89EB46F2B7626490052D430 /* GameViewController+UIElements.swift */,
-				D89EB4752B7655BE0052D430 /* GameViewController+HelperFunctions.swift */,
-			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D8AAC0E82B7F5D27002B9A56 /* HighLowViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D8372ABE2B8769F30008D7EE /* CardsCell.swift */,
 				D8AAC0E92B7F5D4B002B9A56 /* HighLowViewController.swift */,
 				D8AAC0EB2B7F9023002B9A56 /* Extensions */,
 			);
@@ -189,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CE66472B73AF6300D0E4EC /* UserModel.swift */,
+				D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,10 +174,8 @@
 		D8B4FC5E2B7B5D9D0024EAAB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D89B37FD2B84F5DE00AEFC34 /* ProfileViewController */,
 				D8AAC0E82B7F5D27002B9A56 /* HighLowViewController */,
-				D84E95E02B7D0DF7003A426E /* LoginViewController */,
-				D89EB4652B761C850052D430 /* BetViewController */,
-				D89EB46B2B76241C0052D430 /* HomeViewController */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -291,7 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86EFE852B626A3200D2A4AE /* Assets.xcassets in Resources */,
+				D89B380B2B86295200AEFC34 /* MavenPro.ttf in Resources */,
+				D89B38042B86211B00AEFC34 /* Fredoka.ttf in Resources */,
+				D89B38062B8621E800AEFC34 /* Fredoka-Bold.ttf in Resources */,
 				D8AAC0F12B7F9430002B9A56 /* Colors.xcassets in Resources */,
+				D89B38082B86280B00AEFC34 /* Medinah.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,27 +282,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D843FECE2B7E1F2E0008702C /* LoginViewController+HelperFunctions.swift in Sources */,
-				D89EB4702B7626490052D430 /* GameViewController+UIElements.swift in Sources */,
 				D8325BD32B72672B00877BE5 /* UserData.xcdatamodeld in Sources */,
-				D89EB4672B761D510052D430 /* BetViewController+Functions.swift in Sources */,
-				D89EB4762B7655BE0052D430 /* GameViewController+HelperFunctions.swift in Sources */,
+				D89B380D2B864BBC00AEFC34 /* UIViewController+Extensions.swift in Sources */,
 				D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */,
-				D89EB46E2B7624480052D430 /* GameViewController+Functions.swift in Sources */,
+				D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */,
 				D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */,
+				D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */,
+				D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */,
 				D8B4FC632B7B96D00024EAAB /* UsersInformation+CoreDataClass.swift in Sources */,
+				D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */,
 				D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */,
 				D8B4FC672B7B97E80024EAAB /* CoreDataStack.swift in Sources */,
 				D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */,
-				D88669882B7A66D2007CED3E /* BetViewController.swift in Sources */,
-				D886698A2B7A67FD007CED3E /* GameViewController.swift in Sources */,
 				D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */,
-				D89EB4642B761C800052D430 /* BetViewController+UIElements.swift in Sources */,
-				D84E95DF2B7D0DEB003A426E /* LoginViewController.swift in Sources */,
 				D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */,
 				D8B4FC642B7B96D00024EAAB /* UsersInformation+CoreDataProperties.swift in Sources */,
 				D8AAC0EA2B7F5D4B002B9A56 /* HighLowViewController.swift in Sources */,
-				D89EB4692B761D8D0052D430 /* BetViewController+HelperFunctions.swift in Sources */,
+				D89B380F2B864BD700AEFC34 /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +436,9 @@
 				INFOPLIST_FILE = "High or Low/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,9 +446,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eltonruhani.High-or-Low";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -487,8 +468,9 @@
 				INFOPLIST_FILE = "High or Low/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,9 +478,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eltonruhani.High-or-Low";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

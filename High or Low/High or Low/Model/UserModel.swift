@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserModel {
+class UserModel {
     var username: String
     var moneyAmount: Double
     var betsPlaced: Int
@@ -15,4 +15,14 @@ struct UserModel {
     var betsLost: Int
     var profit: Bool
     var moneyMadeLost: Int
+    
+    init(username: String, moneyAmount: Double, betsPlaced: Int, betsWon: Int, betsLost: Int, profit: Bool, moneyMadeLost: Int) {
+        self.username = username
+        self.moneyAmount = moneyAmount
+        self.betsPlaced = betsPlaced
+        self.betsWon = betsWon
+        self.betsLost = betsLost
+        self.profit = profit
+        self.moneyMadeLost = moneyMadeLost
+    }
 }

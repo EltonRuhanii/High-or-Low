@@ -7,16 +7,23 @@
 
 import UIKit
 
+let userOne = UserDatabase().userOne
 extension HighLowViewController {
     func appendElements() {
+        profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
         higherButton.addTarget(self, action: #selector(higherPressed), for: .touchUpInside)
         lowerButton.addTarget(self, action: #selector(lowerPressed), for: .touchUpInside)
         betButton.addTarget(self, action: #selector(betButtonPressed), for: .touchUpInside)
+        maxbetButton.addTarget(self, action: #selector(doubleBet), for: .touchUpInside)
+        halfbetButton.addTarget(self, action: #selector(halfBet), for: .touchUpInside)
+        
         view.addSubview(holderView)
         view.addSubview(navbar)
         navbar.addSubview(logo)
         navbar.addSubview(moneyHolder)
         navbar.addSubview(moneyLabel)
+        navbar.addSubview(profileButton)
+        
         holderView.addSubview(card)
         holderView.addSubview(higherButton)
         holderView.addSubview(lowerButton)
@@ -24,6 +31,8 @@ extension HighLowViewController {
         profitHolder.addSubview(totalProfitLabel)
         profitHolder.addSubview(profitHolderTwo)
         profitHolderTwo.addSubview(profitLabel)
+        view.addSubview(collectionView)
+        
         view.addSubview(bottomView)
         bottomView.addSubview(betAmountLabel)
         bottomView.addSubview(betAmountView)
@@ -31,14 +40,33 @@ extension HighLowViewController {
         betAmountView.addSubview(halfbetButton)
         betAmountView.addSubview(maxbetButton)
         bottomView.addSubview(betButton)
+        
+        view.addSubview(wonAlertView)
+        wonAlertView.addSubview(alertTitle)
+        wonAlertView.addSubview(alertSubtitle)
+        wonAlertView.addSubview(alertCenter)
     }
     
     func setupConstraints() {
+        let viewFiller: UIView = {
+            let view = UIView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.backgroundColor = .backgroundColor
+            return view
+        }()
+        
+        view.addSubview(viewFiller)
+        
         NSLayoutConstraint.activate([
-            navbar.topAnchor.constraint(equalTo: view.topAnchor),
+            viewFiller.topAnchor.constraint(equalTo: view.topAnchor),
+            viewFiller.bottomAnchor.constraint(equalTo: navbar.topAnchor),
+            viewFiller.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            viewFiller.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            navbar.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             navbar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             navbar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            navbar.heightAnchor.constraint(equalToConstant: 100),
+            navbar.heightAnchor.constraint(equalToConstant: 60),
             
             moneyHolder.heightAnchor.constraint(equalToConstant: 40),
             moneyHolder.centerXAnchor.constraint(equalTo: navbar.centerXAnchor),
@@ -51,6 +79,11 @@ extension HighLowViewController {
             
             moneyLabel.centerXAnchor.constraint(equalTo: moneyHolder.centerXAnchor),
             moneyLabel.centerYAnchor.constraint(equalTo: moneyHolder.centerYAnchor),
+            
+            profileButton.heightAnchor.constraint(equalToConstant: 70),
+            profileButton.widthAnchor.constraint(equalToConstant: 70),
+            profileButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            profileButton.centerYAnchor.constraint(equalTo: moneyHolder.centerYAnchor),
             
             holderView.topAnchor.constraint(equalTo: navbar.bottomAnchor, constant: 24),
             holderView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
@@ -85,7 +118,7 @@ extension HighLowViewController {
             profitHolder.trailingAnchor.constraint(equalTo: holderView.trailingAnchor, constant: -12),
             
             totalProfitLabel.topAnchor.constraint(equalTo: profitHolder.topAnchor),
-            totalProfitLabel.leadingAnchor.constraint(equalTo: profitHolder.leadingAnchor, constant: 6),
+            totalProfitLabel.leadingAnchor.constraint(equalTo: profitHolderTwo.leadingAnchor),
             totalProfitLabel.trailingAnchor.constraint(equalTo: profitHolder.trailingAnchor, constant: -6),
             totalProfitLabel.heightAnchor.constraint(equalToConstant: 25),
             
@@ -95,12 +128,18 @@ extension HighLowViewController {
             profitHolderTwo.heightAnchor.constraint(equalToConstant: 40),
             
             profitLabel.topAnchor.constraint(equalTo: profitHolderTwo.topAnchor),
-            profitLabel.leadingAnchor.constraint(equalTo: profitHolderTwo.leadingAnchor),
+            profitLabel.leadingAnchor.constraint(equalTo: profitHolderTwo.leadingAnchor, constant: 12),
             profitLabel.trailingAnchor.constraint(equalTo: profitHolderTwo.trailingAnchor),
             profitLabel.bottomAnchor.constraint(equalTo: profitHolderTwo.bottomAnchor),
             
             profitHolder.bottomAnchor.constraint(equalTo: profitHolderTwo.bottomAnchor, constant: 12),
-            holderView.bottomAnchor.constraint(equalTo: profitHolder.bottomAnchor, constant: 24),
+            
+            collectionView.topAnchor.constraint(equalTo: profitHolder.bottomAnchor, constant: 12),
+            collectionView.leadingAnchor.constraint(equalTo: profitHolder.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: profitHolder.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 80),
+            
+            holderView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 24),
         ])
         
         NSLayoutConstraint.activate([
@@ -115,7 +154,7 @@ extension HighLowViewController {
             betAmountView.topAnchor.constraint(equalTo: betAmountLabel.bottomAnchor, constant: 12),
             betAmountView.leadingAnchor.constraint(equalTo: betAmountLabel.leadingAnchor),
             betAmountView.trailingAnchor.constraint(equalTo: betAmountLabel.trailingAnchor),
-            betAmountView.heightAnchor.constraint(equalToConstant: 40),
+            betAmountView.heightAnchor.constraint(equalToConstant: 50),
             
             betAmountTF.topAnchor.constraint(equalTo: betAmountView.topAnchor, constant: 2),
             betAmountTF.leadingAnchor.constraint(equalTo: betAmountView.leadingAnchor, constant: 2),
@@ -139,6 +178,23 @@ extension HighLowViewController {
             
             bottomView.bottomAnchor.constraint(equalTo: betButton.bottomAnchor, constant: 12),
             
+            wonAlertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            wonAlertView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            wonAlertView.widthAnchor.constraint(equalToConstant: 150),
+            wonAlertView.heightAnchor.constraint(equalToConstant: 100),
+            
+            alertTitle.bottomAnchor.constraint(equalTo: wonAlertView.centerYAnchor, constant: -8),
+            alertTitle.leadingAnchor.constraint(equalTo: wonAlertView.leadingAnchor, constant: 16),
+            alertTitle.trailingAnchor.constraint(equalTo: wonAlertView.trailingAnchor, constant: -16),
+            
+            alertCenter.centerYAnchor.constraint(equalTo: wonAlertView.centerYAnchor),
+            alertCenter.centerXAnchor.constraint(equalTo: wonAlertView.centerXAnchor),
+            alertCenter.heightAnchor.constraint(equalToConstant: 4),
+            alertCenter.widthAnchor.constraint(equalToConstant: 50),
+            
+            alertSubtitle.topAnchor.constraint(equalTo: wonAlertView.centerYAnchor, constant: 8),
+            alertSubtitle.leadingAnchor.constraint(equalTo: wonAlertView.leadingAnchor, constant: 16),
+            alertSubtitle.trailingAnchor.constraint(equalTo: wonAlertView.trailingAnchor, constant: -16),
         ])
     }
 }
