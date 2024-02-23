@@ -236,7 +236,7 @@ class HighLowViewController: UIViewController {
         ProbailtyModel(higher: 8, lower: 92),
     ]
     
-    var cardsArray: [Int] = []
+    var cardsArray: [String] = []
     
     // MARK: - Variables
     var wrongGuess: Bool = false
@@ -247,6 +247,7 @@ class HighLowViewController: UIViewController {
     var multiplier: Double = 1.0
     var betAmount: Double =  0
     var isPlaying: Bool = false
+    var cardType = 1
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {

@@ -18,16 +18,17 @@ extension HighLowViewController {
     
     // Gets a new random number and then updates the values, and card image
     func getNewNumber() {
-        cardsArray.append(currentNumber)
+        cardsArray.append("\(currentNumber)-\(cardType)")
         newNumber = Int(arc4random_uniform(13)) + 1
         lastNumber = currentNumber
         currentNumber = newNumber
         card.alpha = 0
         print(probailty[currentNumber-1])
+        cardType = Int(arc4random_uniform(4)) + 1
         
         UIView.animate(withDuration: 1) {
             self.profitLabel.text = "\(self.betAmount * self.multiplier)"
-            self.card.image = UIImage(named: "\(self.currentNumber)")
+            self.card.image = UIImage(named: "\(self.currentNumber)-\(self.cardType)")
             self.card.alpha = 1
         }
         collectionView.reloadData()
