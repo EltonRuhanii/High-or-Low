@@ -26,7 +26,11 @@ extension HighLowViewController {
         
         holderView.addSubview(card)
         holderView.addSubview(higherButton)
+        higherButton.addSubview(higherButtonTitle)
+        higherButton.addSubview(higherButtonSubtitle)
         holderView.addSubview(lowerButton)
+        lowerButton.addSubview(lowerButtonTitle)
+        lowerButton.addSubview(lowerButtonSubtitle)
         holderView.addSubview(profitHolder)
         profitHolder.addSubview(totalProfitLabel)
         profitHolder.addSubview(profitHolderTwo)
@@ -99,10 +103,26 @@ extension HighLowViewController {
             higherButton.heightAnchor.constraint(equalTo: higherButton.widthAnchor, multiplier: 1.25),
             higherButton.leadingAnchor.constraint(equalTo: holderView.centerXAnchor, constant: 15),
             
+            higherButtonTitle.leadingAnchor.constraint(equalTo: higherButton.leadingAnchor),
+            higherButtonTitle.trailingAnchor.constraint(equalTo: higherButton.trailingAnchor),
+            
+            higherButtonSubtitle.topAnchor.constraint(equalTo: higherButtonTitle.bottomAnchor),
+            higherButtonSubtitle.leadingAnchor.constraint(equalTo: higherButtonTitle.leadingAnchor),
+            higherButtonSubtitle.trailingAnchor.constraint(equalTo: higherButtonTitle.trailingAnchor),
+            higherButtonSubtitle.bottomAnchor.constraint(equalTo: higherButton.bottomAnchor, constant: -6),
+            
             lowerButton.topAnchor.constraint(equalTo: higherButton.bottomAnchor, constant: 20),
             lowerButton.widthAnchor.constraint(equalTo: higherButton.widthAnchor),
             lowerButton.heightAnchor.constraint(equalTo: higherButton.heightAnchor),
             lowerButton.leadingAnchor.constraint(equalTo: higherButton.leadingAnchor),
+            
+            lowerButtonTitle.leadingAnchor.constraint(equalTo: lowerButton.leadingAnchor),
+            lowerButtonTitle.trailingAnchor.constraint(equalTo: lowerButton.trailingAnchor),
+            lowerButtonTitle.topAnchor.constraint(equalTo: lowerButton.topAnchor, constant: 6),
+            
+            lowerButtonSubtitle.topAnchor.constraint(equalTo: lowerButtonTitle.bottomAnchor),
+            lowerButtonSubtitle.leadingAnchor.constraint(equalTo: lowerButtonTitle.leadingAnchor),
+            lowerButtonSubtitle.trailingAnchor.constraint(equalTo: lowerButtonTitle.trailingAnchor),
             
             profitHolderTwo.topAnchor.constraint(equalTo: totalProfitLabel.bottomAnchor),
             profitHolderTwo.leadingAnchor.constraint(equalTo: profitHolder.leadingAnchor, constant: 12),

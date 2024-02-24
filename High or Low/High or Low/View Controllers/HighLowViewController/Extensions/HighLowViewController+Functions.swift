@@ -125,6 +125,10 @@ extension HighLowViewController {
             maxbetButton.isEnabled = false
             higherButton.isEnabled = true
             lowerButton.isEnabled = true
+            higherButtonTitle.layer.opacity = 0.5
+            higherButtonSubtitle.layer.opacity = 0.5 
+            lowerButtonTitle.layer.opacity = 0.5
+            lowerButtonSubtitle.layer.opacity = 0.5
             betButton.setTitle("Cashout", for: .normal)
             betAmountTF.isEnabled = false
         } else {
@@ -132,6 +136,10 @@ extension HighLowViewController {
             maxbetButton.isEnabled = true
             higherButton.isEnabled = false
             lowerButton.isEnabled = false
+            higherButtonTitle.layer.opacity = 1
+            higherButtonSubtitle.layer.opacity = 1
+            lowerButtonTitle.layer.opacity = 1
+            lowerButtonSubtitle.layer.opacity = 01
             betButton.setTitle("Bet", for: .normal)
             betAmountTF.isEnabled = true
         }
