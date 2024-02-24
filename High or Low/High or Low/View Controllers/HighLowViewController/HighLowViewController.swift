@@ -59,6 +59,7 @@ class HighLowViewController: UIViewController {
         view.layer.borderColor = UIColor.red.cgColor
         return view
     }()
+    
     let higherButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -67,6 +68,27 @@ class HighLowViewController: UIViewController {
         
         return button
     }()
+    let higherButtonTitle: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "HIGHER"
+        label.textAlignment = .center
+        label.font = UIFont(name: "Fredoka-Bold", size: 20)
+        label.textColor = .primaryColor
+        
+        return label
+    }()
+    let higherButtonSubtitle: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "80 %"
+        label.textAlignment = .center
+        label.font = UIFont(name: "Fredoka-Bold", size: 14)
+        label.textColor = .primaryColor
+        
+        return label
+    }()
+    
     let lowerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -75,6 +97,27 @@ class HighLowViewController: UIViewController {
         
         return button
     }()
+    let lowerButtonTitle: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.text = "LOWER"
+        label.font = UIFont(name: "Fredoka-Bold", size: 20)
+        label.textColor = .primaryColor
+        
+        return label
+    }()
+    let lowerButtonSubtitle: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "20 %"
+        label.textAlignment = .center
+        label.font = UIFont(name: "Fredoka-Bold", size: 14)
+        label.textColor = .primaryColor
+        
+        return label
+    }()
+    
     let profitHolder: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -109,9 +152,10 @@ class HighLowViewController: UIViewController {
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        
+    
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .backgroundColor
         collectionView.layer.cornerRadius = 10
         collectionView.register(CardsCell.self, forCellWithReuseIdentifier: CardsCell.identifier)
