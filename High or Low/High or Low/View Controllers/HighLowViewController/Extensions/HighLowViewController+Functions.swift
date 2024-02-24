@@ -23,7 +23,20 @@ extension HighLowViewController {
         lastNumber = currentNumber
         currentNumber = newNumber
         card.alpha = 0
-        print(probailty[currentNumber-1])
+        if currentNumber == 1 {
+            lowerButtonTitle.text = "SAME"
+        } else {
+            lowerButtonTitle.text = "LOWER"
+        }
+        
+        if currentNumber == 13 {
+            higherButtonTitle.text = "SAME"
+        } else {
+            higherButtonTitle.text = "HIGHER"
+        }
+        
+        higherButtonSubtitle.text = "\(probailty[currentNumber - 1].higher) %"
+        lowerButtonSubtitle.text = "\(probailty[currentNumber - 1].lower) %"
         cardType = Int(arc4random_uniform(4)) + 1
         
         UIView.animate(withDuration: 1) {
@@ -96,7 +109,13 @@ extension HighLowViewController {
     
     func calculateMultiplier() {
         if (lastNumber > 10 && higherGuess) || (lastNumber < 4 && !higherGuess) {
-            multiplier = multiplier * 2.23
+            if higherGuess && higherButtonTitle.text == "SAME" {
+                multiplier = multiplier * 3.15
+            } else if !higherGuess && lowerButtonTitle.text == "SAME" {
+                multiplier = multiplier * 3.15
+            } else {
+                multiplier = multiplier * 2.25
+            }
         } else {
             multiplier = multiplier * 1.35
         }
@@ -125,10 +144,10 @@ extension HighLowViewController {
             maxbetButton.isEnabled = false
             higherButton.isEnabled = true
             lowerButton.isEnabled = true
-            higherButtonTitle.layer.opacity = 0.5
-            higherButtonSubtitle.layer.opacity = 0.5 
-            lowerButtonTitle.layer.opacity = 0.5
-            lowerButtonSubtitle.layer.opacity = 0.5
+            higherButtonTitle.layer.opacity = 1
+            higherButtonSubtitle.layer.opacity = 1
+            lowerButtonTitle.layer.opacity = 1
+            lowerButtonSubtitle.layer.opacity = 1
             betButton.setTitle("Cashout", for: .normal)
             betAmountTF.isEnabled = false
         } else {
@@ -136,10 +155,10 @@ extension HighLowViewController {
             maxbetButton.isEnabled = true
             higherButton.isEnabled = false
             lowerButton.isEnabled = false
-            higherButtonTitle.layer.opacity = 1
-            higherButtonSubtitle.layer.opacity = 1
-            lowerButtonTitle.layer.opacity = 1
-            lowerButtonSubtitle.layer.opacity = 01
+            higherButtonTitle.layer.opacity = 0.5
+            higherButtonSubtitle.layer.opacity = 0.5
+            lowerButtonTitle.layer.opacity = 0.5
+            lowerButtonSubtitle.layer.opacity = 0.5
             betButton.setTitle("Bet", for: .normal)
             betAmountTF.isEnabled = true
         }

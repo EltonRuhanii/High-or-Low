@@ -152,9 +152,10 @@ class HighLowViewController: UIViewController {
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        
+    
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .backgroundColor
         collectionView.layer.cornerRadius = 10
         collectionView.register(CardsCell.self, forCellWithReuseIdentifier: CardsCell.identifier)
