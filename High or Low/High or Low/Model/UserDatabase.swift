@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class UserDatabase {
     var userOne: UserModel = UserModel(username: "WIZZ", moneyAmount: 1000.0, betsPlaced: 0, betsWon: 0, betsLost: 0, profit: false, moneyMadeLost: 0)
 }
