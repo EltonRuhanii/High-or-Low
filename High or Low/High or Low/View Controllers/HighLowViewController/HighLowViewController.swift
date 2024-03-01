@@ -8,6 +8,7 @@
 import UIKit
 
 class HighLowViewController: UIViewController {
+    // MARK: - UI ELEMENTS
     let navbar: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false

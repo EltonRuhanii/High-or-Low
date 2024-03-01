@@ -13,10 +13,10 @@ class UserModel {
     var betsPlaced: Int
     var betsWon: Int
     var betsLost: Int
-    var profit: Bool
+    var profit: Double
     var moneyMadeLost: Int
     
-    init(username: String, moneyAmount: Double, betsPlaced: Int, betsWon: Int, betsLost: Int, profit: Bool, moneyMadeLost: Int) {
+    init(username: String, moneyAmount: Double, betsPlaced: Int, betsWon: Int, betsLost: Int, profit: Double, moneyMadeLost: Int) {
         self.username = username
         self.moneyAmount = moneyAmount
         self.betsPlaced = betsPlaced

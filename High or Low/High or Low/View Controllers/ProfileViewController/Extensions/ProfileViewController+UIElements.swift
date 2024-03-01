@@ -179,7 +179,32 @@ extension ProfileViewController {
             return label
         }()
         
-        profileButton.addTarget(self, action: #selector(logoTapped), for: .touchUpInside)
+        let profit: UIView = {
+            let view = UIView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.layer.cornerRadius = 10
+            view.backgroundColor = .primaryColor
+            view.applyShadow()
+            return view
+        }()
+        let profitTitle: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.text = "Profit / Loss"
+            label.font = UIFont.boldSystemFont(ofSize: 18)
+            label.textColor = .textColor
+            return label
+        }()
+        let profitValue: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.text = "\(String(format: "%.2f", userOne.profit))"
+            label.font = UIFont.systemFont(ofSize: 18)
+            label.textColor = .textColor
+            return label
+        }()
+        
+        profileButton.addTarget(self, action: #selector(goToHome), for: .touchUpInside)
         
         view.addSubview(navbar)
         navbar.addSubview(logo)
@@ -208,6 +233,10 @@ extension ProfileViewController {
         view.addSubview(totalWins)
         totalWins.addSubview(totalWinsTitle)
         totalWins.addSubview(totalWinsValue)
+        
+        view.addSubview(profit)
+        profit.addSubview(profitTitle)
+        profit.addSubview(profitValue)
         
         NSLayoutConstraint.activate([
             viewFiller.topAnchor.constraint(equalTo: view.topAnchor),
@@ -302,6 +331,21 @@ extension ProfileViewController {
             totalWinsValue.topAnchor.constraint(equalTo: totalWins.centerYAnchor, constant: 3),
             totalWinsValue.leadingAnchor.constraint(equalTo: totalWins.layoutMarginsGuide.leadingAnchor),
             totalWinsValue.trailingAnchor.constraint(equalTo: totalWins.layoutMarginsGuide.trailingAnchor),
+            
+            // Profit
+            profit.topAnchor.constraint(equalTo: totalLosses.bottomAnchor, constant: 24),
+            profit.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            profit.heightAnchor.constraint(equalTo: totalWins.widthAnchor, multiplier: 0.5),
+            profit.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -12),
+            
+            profitTitle.bottomAnchor.constraint(equalTo: profit.centerYAnchor, constant: -3),
+            profitTitle.leadingAnchor.constraint(equalTo: profit.layoutMarginsGuide.leadingAnchor),
+            profitTitle.trailingAnchor.constraint(equalTo: profit.layoutMarginsGuide.trailingAnchor),
+            
+            profitValue.topAnchor.constraint(equalTo: profit.centerYAnchor, constant: 3),
+            profitValue.leadingAnchor.constraint(equalTo: profit.layoutMarginsGuide.leadingAnchor),
+            profitValue.trailingAnchor.constraint(equalTo: profit.layoutMarginsGuide.trailingAnchor),
+            
         ])
     }
 }

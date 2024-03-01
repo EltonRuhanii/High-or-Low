@@ -6,15 +6,18 @@
 //
 
 import UIKit
+import SwiftData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
+    
+    let test = MinesViewController()
+    let live = HighLowViewController()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let navigationController = UINavigationController(rootViewController: HighLowViewController())
+        let navigationController = UINavigationController(rootViewController: live)
         navigationController.isNavigationBarHidden = true
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = navigationController
