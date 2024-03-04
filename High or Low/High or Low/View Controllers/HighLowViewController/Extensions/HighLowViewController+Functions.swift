@@ -4,15 +4,8 @@
 //
 //  Created by Kin+Carta on 16.2.24.
 //
-// TODO 
-/*
- - fix wagered
- - make the collection view stay at the end
- - make profile view controller use a collection view
-*/
 
 import UIKit
-import SwiftData
 
 extension HighLowViewController {
     // MARK: Button functions
@@ -26,19 +19,9 @@ extension HighLowViewController {
     
     @objc func betButtonPressed() {
         if isPlaying {
-            userOne.betsWon += 1
-            UIView.animate(withDuration: 0.5) {
-                self.calculateProfit()
-                self.betButton.layer.opacity -= 0.5
-                self.betButton.layer.opacity += 0.5
-            }
+            cashout()
         } else {
-            cardsArray = []
-            UIView.animate(withDuration: 0.5) {
-                self.betPlaced()
-                self.betButton.layer.opacity -= 0.5
-                self.betButton.layer.opacity += 0.5
-            }
+            handleBetPlaced()
         }
     }
     
@@ -57,7 +40,6 @@ extension HighLowViewController {
             print("Failed to convert to integer")
         }
     }
-    
     
     /// Takes the current bet amount and devides by 2
     @objc func halfBet() {
@@ -83,7 +65,18 @@ extension HighLowViewController {
         newNumber = Int(arc4random_uniform(13)) + 1
         lastNumber = currentNumber
         currentNumber = newNumber
+        cardType = Int(arc4random_uniform(4)) + 1
         card.alpha = 0
+        
+        UIView.animate(withDuration: 1) {
+            self.minMaxStyler()
+            self.card.alpha = 1
+            self.collectionView.reloadData()
+        }
+    }
+    
+    //  Styler for max/min card
+    func minMaxStyler() {
         if currentNumber == 1 {
             lowerButtonTitle.text = "SAME"
         } else {
@@ -95,19 +88,11 @@ extension HighLowViewController {
         } else {
             higherButtonTitle.text = "HIGHER"
         }
-        
+        self.profitLabel.text = "\(self.betAmount * self.multiplier)"
+        self.card.image = UIImage(named: "\(self.currentNumber)-\(self.cardType)")
         higherButtonSubtitle.text = "\(probailty[currentNumber - 1].higher) %"
         lowerButtonSubtitle.text = "\(probailty[currentNumber - 1].lower) %"
-        cardType = Int(arc4random_uniform(4)) + 1
-        
-        UIView.animate(withDuration: 1) {
-            self.profitLabel.text = "\(self.betAmount * self.multiplier)"
-            self.card.image = UIImage(named: "\(self.currentNumber)-\(self.cardType)")
-            self.card.alpha = 1
-        }
-        collectionView.reloadData()
     }
-    
     // MARK: Handle Guess functions
     /// Handles the user guess, calls a set of functions which determine if the user guessed correct or wrong
     /// - Parameter higher: takes a boolean value to determine user guess, True for higher, False for lower
@@ -118,14 +103,10 @@ extension HighLowViewController {
     
     func checkGuess() {
         if higherGuess {
-            higherCard()
+            compareCards(isHigher: true)
         } else {
-            lowerCard()
+            compareCards(isHigher: false)
         }
-    }
-    
-    func handleCorrectGuess() {
-        calculateMultiplier()
     }
     
     /// Handles wrong guess from user
@@ -135,26 +116,17 @@ extension HighLowViewController {
         userOne.moneyMadeLost += Int(betAmount)
         styleCard()
         calculateLoss()
-        resetValues()
         wrongGuess = false
     }
     
-    func higherCard() {
-        if newNumber >= lastNumber {
-            handleCorrectGuess()
+    func compareCards(isHigher: Bool) {
+        if (isHigher && newNumber >= lastNumber) || (!isHigher && newNumber <= lastNumber) {
+            calculateMultiplier(isHigher: isHigher)
         } else {
             handleWrongGuess()
         }
     }
     
-    func lowerCard() {
-        if newNumber <= lastNumber {
-            handleCorrectGuess()
-        } else {
-            handleWrongGuess()
-        }
-    }
-
     // MARK: Styles the card
     /// Styles the card, When the user guesses incorrect the card gets a red border to let the user know they were wrong, Also animates the change of the card
     func styleCard() {
@@ -173,7 +145,6 @@ extension HighLowViewController {
             UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut], animations: {
                 self.card.layer.transform = CATransform3DMakeRotation(CGFloat.pi * 2, 0, 1, 0)
             }) { _ in
-                
                 self.checkGuess()
             }
         }
@@ -188,20 +159,24 @@ extension HighLowViewController {
         betAmount = 0
     }
     
-    
-    // MARK: Calculate's multiplier
-    func calculateMultiplier() {
-        if higherGuess {
-            calculateHigherMultiplier(isHigher: true)
-        } else {
-            calculateHigherMultiplier(isHigher: false)
+    // MARK: Bet Actions
+    func cashout() {
+        userOne.betsWon += 1
+        UIView.animate(withDuration: 0.5) {
+            self.calculateProfit()
+            self.betButton.layer.opacity -= 0.5
+            self.betButton.layer.opacity += 0.5
         }
-        
-        totalProfitLabel.text = "Total Profit (\(String(format: "%.2f", multiplier))x)"
-        profitLabel.text = "\(String(format: "%.2f", self.betAmount * self.multiplier))"
     }
     
-    
+    func handleBetPlaced() {
+        cardsArray = []
+        UIView.animate(withDuration: 0.5) {
+            self.betPlaced()
+            self.betButton.layer.opacity -= 0.5
+            self.betButton.layer.opacity += 0.5
+        }
+    }
     
     // MARK: Handle isPlaying
     func handleIsPlaying() {
@@ -229,7 +204,6 @@ extension HighLowViewController {
             betAmountTF.isEnabled = true
         }
     }
-    
     
     func showAlert() {
         alertTitle.text = "\(String(format: "%.2f", multiplier))x"
@@ -281,37 +255,18 @@ extension HighLowViewController {
     }
     
     // MARK: Multiplier cases
-    func calculateHigherMultiplier(isHigher: Bool) {
-        switch lastNumber {
-            case 1:
-                multiplier *= isHigher ? 1.13 : 3.13
-            case 2:
-                multiplier *= isHigher ? 1.18 : 2.35
-            case 3:
-                multiplier *= isHigher ? 1.24 : 1.98
-            case 4:
-                multiplier *= isHigher ? 1.33 : 1.88
-            case 5:
-                multiplier *= isHigher ? 1.37 : 1.75
-            case 6:
-                multiplier *= isHigher ? 1.42 : 1.62
-            case 7:
-                multiplier *= 1.55
-            case 8:
-                multiplier *= isHigher ? 1.65 : 1.42
-            case 9:
-                multiplier *= isHigher ? 1.75 : 1.37
-            case 10:
-                multiplier *= isHigher ? 1.86 : 1.28
-            case 11:
-                multiplier *= isHigher ? 1.97 : 1.22
-            case 12:
-                multiplier *= isHigher ? 2.35 : 1.18
-            case 13:
-                multiplier *= isHigher ? 3.13 : 1.14
-            default:
-                print("Number out of range")
-            }
-        }
+    func calculateMultiplier(isHigher: Bool) {
+        let multiplierForLowerGuess: [Double] = [
+            3.13, 2.35, 1.97, 1.86, 1.75, 1.65, 1.55,
+            1.42, 1.37, 1.33, 1.24, 1.18, 1.13 ]
+        
+        let multiplierForHigherGuess: [Double] = multiplierForLowerGuess.reversed()
+        let index = lastNumber - 1
+        let selectedMultiplier = isHigher ? multiplierForHigherGuess[index] : multiplierForLowerGuess[index]
+        
+        multiplier *= selectedMultiplier
+        
+        totalProfitLabel.text = "Total Profit (\(String(format: "%.2f", multiplier))x)"
+        profitLabel.text = "\(String(format: "%.2f", self.betAmount * self.multiplier))"
     }
-    
+}

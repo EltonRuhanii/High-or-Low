@@ -127,7 +127,7 @@ extension HighLowViewController {
             profitHolderTwo.topAnchor.constraint(equalTo: totalProfitLabel.bottomAnchor),
             profitHolderTwo.leadingAnchor.constraint(equalTo: profitHolder.leadingAnchor, constant: 12),
             profitHolderTwo.trailingAnchor.constraint(equalTo: profitHolder.trailingAnchor, constant: -12),
-    
+            
             profitLabel.topAnchor.constraint(equalTo: profitHolderTwo.topAnchor),
             profitLabel.trailingAnchor.constraint(equalTo: profitHolderTwo.trailingAnchor),
             profitLabel.leadingAnchor.constraint(equalTo: profitHolderTwo.leadingAnchor),

@@ -77,7 +77,7 @@ extension ProfileViewController {
             label.textColor = .textColor
             return label
         }()
-
+        
         // Cell
         let totalBets: UIView = {
             let view = UIView()
