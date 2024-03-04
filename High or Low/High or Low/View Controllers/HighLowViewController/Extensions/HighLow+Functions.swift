@@ -7,59 +7,8 @@
 
 import UIKit
 
+// MARK: - Get New Number
 extension HighLowViewController {
-    // MARK: Button functions
-    @objc func higherPressed() {
-        handleGuess(higher: true)
-    }
-    
-    @objc func lowerPressed() {
-        handleGuess(higher: false)
-    }
-    
-    @objc func betButtonPressed() {
-        if isPlaying {
-            cashout()
-        } else {
-            handleBetPlaced()
-        }
-    }
-    
-    /// Action Button for profiile button, to send to profile view controller
-    @objc func profileButtonPressed() {
-        let profileVC = ProfileViewController()
-        navigationController?.pushViewController(profileVC, animated: true)
-    }
-    
-    /// Takes the current bet amount and doubles by 2
-    @objc func doubleBet() {
-        if let text = betAmountTF.text, let intValue = Double(text) {
-            betAmount = intValue * 2
-            betAmountTF.text = "\(betAmount)"
-        } else {
-            print("Failed to convert to integer")
-        }
-    }
-    
-    /// Takes the current bet amount and devides by 2
-    @objc func halfBet() {
-        if let text = betAmountTF.text, let intValue = Double(text) {
-            betAmount = intValue / 2
-            betAmountTF.text = "\(betAmount)"
-        } else {
-            print("Failed to convert to integer")
-        }
-    }
-    
-    // Hides the alert
-    @objc func screenTapped() {
-        if wonAlertView.isHidden == false {
-            wonAlertView.isHidden = true
-        }
-    }
-    
-    // MARK: Get New Number
-    // Gets a new random number and then updates the values, and card image
     func getNewNumber() {
         cardsArray.append("\(currentNumber)-\(cardType)")
         newNumber = Int(arc4random_uniform(13)) + 1
@@ -75,7 +24,6 @@ extension HighLowViewController {
         }
     }
     
-    //  Styler for max/min card
     func minMaxStyler() {
         if currentNumber == 1 {
             lowerButtonTitle.text = "SAME"
@@ -93,9 +41,9 @@ extension HighLowViewController {
         higherButtonSubtitle.text = "\(probailty[currentNumber - 1].higher) %"
         lowerButtonSubtitle.text = "\(probailty[currentNumber - 1].lower) %"
     }
-    // MARK: Handle Guess functions
-    /// Handles the user guess, calls a set of functions which determine if the user guessed correct or wrong
-    /// - Parameter higher: takes a boolean value to determine user guess, True for higher, False for lower
+    
+    
+    // MARK: - Handle Guess functions
     func handleGuess(higher: Bool) {
         higherGuess = higher
         styleCard()
@@ -109,7 +57,6 @@ extension HighLowViewController {
         }
     }
     
-    /// Handles wrong guess from user
     func handleWrongGuess() {
         wrongGuess = true
         userOne.betsLost += 1
@@ -127,8 +74,6 @@ extension HighLowViewController {
         }
     }
     
-    // MARK: Styles the card
-    /// Styles the card, When the user guesses incorrect the card gets a red border to let the user know they were wrong, Also animates the change of the card
     func styleCard() {
         if wrongGuess {
             UIView.animate(withDuration: 0.5) {
@@ -150,8 +95,8 @@ extension HighLowViewController {
         }
     }
     
-    // MARK: Reset the values
-    /// Resets the values and updates the UI
+    
+    // MARK: - Reset the values
     func resetValues() {
         multiplier = 1.00
         totalProfitLabel.text = "Total Profit (\(String(format: "%.2f", multiplier))x)"
@@ -159,7 +104,7 @@ extension HighLowViewController {
         betAmount = 0
     }
     
-    // MARK: Bet Actions
+    // MARK: - Bet Actions
     func cashout() {
         userOne.betsWon += 1
         UIView.animate(withDuration: 0.5) {
@@ -178,13 +123,11 @@ extension HighLowViewController {
         }
     }
     
-    // MARK: Handle isPlaying
+    
+    // MARK: - Handle isPlaying
     func handleIsPlaying() {
         if isPlaying {
-            halfbetButton.isEnabled = false
-            maxbetButton.isEnabled = false
-            higherButton.isEnabled = true
-            lowerButton.isEnabled = true
+            toggleButtons()
             higherButtonTitle.layer.opacity = 1
             higherButtonSubtitle.layer.opacity = 1
             lowerButtonTitle.layer.opacity = 1
@@ -192,10 +135,7 @@ extension HighLowViewController {
             betButton.setTitle("Cashout", for: .normal)
             betAmountTF.isEnabled = false
         } else {
-            halfbetButton.isEnabled = true
-            maxbetButton.isEnabled = true
-            higherButton.isEnabled = false
-            lowerButton.isEnabled = false
+            toggleButtons()
             higherButtonTitle.layer.opacity = 0.5
             higherButtonSubtitle.layer.opacity = 0.5
             lowerButtonTitle.layer.opacity = 0.5
@@ -205,6 +145,21 @@ extension HighLowViewController {
         }
     }
     
+    func toggleButtons() {
+        if isPlaying {
+            halfbetButton.isEnabled = false
+            maxbetButton.isEnabled = false
+            higherButton.isEnabled = true
+            lowerButton.isEnabled =  true
+        } else {
+            halfbetButton.isEnabled = true
+            maxbetButton.isEnabled = true
+            higherButton.isEnabled = false
+            lowerButton.isEnabled = false
+        }
+    }
+    
+    // MARK: - Additional Functions
     func showAlert() {
         alertTitle.text = "\(String(format: "%.2f", multiplier))x"
         alertSubtitle.text = "\(String(format: "%.2f", betAmount * multiplier))"
@@ -233,8 +188,7 @@ extension HighLowViewController {
         betAmount = 0
     }
     
-    // MARK: Bet Placed
-    /// Handles the action that will be called when bet button pressed, Which will change from Bet to Checkout depending on the case
+    // MARK: - Bet Placed
     func betPlaced() {
         if let text = betAmountTF.text, let intValue = Double(text) {
             if intValue > userOne.moneyAmount {
@@ -254,7 +208,7 @@ extension HighLowViewController {
         }
     }
     
-    // MARK: Multiplier cases
+    // MARK: - Multiplier cases
     func calculateMultiplier(isHigher: Bool) {
         let multiplierForLowerGuess: [Double] = [
             3.13, 2.35, 1.97, 1.86, 1.75, 1.65, 1.55,

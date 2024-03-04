@@ -10,7 +10,8 @@
 		D83231AE2B8F2DF600F5DF83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83231AD2B8F2DF600F5DF83 /* UIColor+Extension.swift */; };
 		D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */; };
 		D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABE2B8769F30008D7EE /* CardsCell.swift */; };
-		D8372AC22B879A9F0008D7EE /* HighLowViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */; };
+		D8372AC22B879A9F0008D7EE /* HighLow+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372AC12B879A9F0008D7EE /* HighLow+CollectionView.swift */; };
+		D8534DD82B9605540042FD80 /* HighLow+ButtonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8534DD72B9605540042FD80 /* HighLow+ButtonFunctions.swift */; };
 		D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */; };
 		D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */; };
 		D86EFE852B626A3200D2A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86EFE842B626A3200D2A4AE /* Assets.xcassets */; };
@@ -18,7 +19,7 @@
 		D86F04922B8CD18000BA03BC /* MinesVC+UIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F04912B8CD18000BA03BC /* MinesVC+UIFunctions.swift */; };
 		D86F04942B8CD26500BA03BC /* MinesVC+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F04932B8CD26500BA03BC /* MinesVC+Functions.swift */; };
 		D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */; };
-		D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */; };
+		D89B38022B84FEAA00AEFC34 /* Profiler+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B38012B84FEAA00AEFC34 /* Profiler+UIElements.swift */; };
 		D89B38042B86211B00AEFC34 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38032B86211A00AEFC34 /* Fredoka.ttf */; };
 		D89B38062B8621E800AEFC34 /* Fredoka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38052B8621E800AEFC34 /* Fredoka-Bold.ttf */; };
 		D89B38082B86280B00AEFC34 /* Medinah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38072B86280A00AEFC34 /* Medinah.ttf */; };
@@ -26,8 +27,8 @@
 		D89B380D2B864BBC00AEFC34 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B380C2B864BBC00AEFC34 /* UIViewController+Extensions.swift */; };
 		D89B380F2B864BD700AEFC34 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B380E2B864BD700AEFC34 /* UIView+Extension.swift */; };
 		D8AAC0EA2B7F5D4B002B9A56 /* HighLowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0E92B7F5D4B002B9A56 /* HighLowViewController.swift */; };
-		D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */; };
-		D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */; };
+		D8AAC0ED2B7F903C002B9A56 /* HighLow+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EC2B7F903C002B9A56 /* HighLow+Functions.swift */; };
+		D8AAC0EF2B7F9081002B9A56 /* HighLow+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EE2B7F9081002B9A56 /* HighLow+UIElements.swift */; };
 		D8AAC0F12B7F9430002B9A56 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AAC0F02B7F9430002B9A56 /* Colors.xcassets */; };
 		D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE66472B73AF6300D0E4EC /* UserModel.swift */; };
 		D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE66492B73B50500D0E4EC /* UserDatabase.swift */; };
@@ -50,8 +51,9 @@
 		D83231AD2B8F2DF600F5DF83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbailtyModel.swift; sourceTree = "<group>"; };
 		D8372ABE2B8769F30008D7EE /* CardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCell.swift; sourceTree = "<group>"; };
-		D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		D8372AC12B879A9F0008D7EE /* HighLow+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLow+CollectionView.swift"; sourceTree = "<group>"; };
 		D84E95E22B7D13DD003A426E /* JosefinSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JosefinSans.ttf; sourceTree = "<group>"; };
+		D8534DD72B9605540042FD80 /* HighLow+ButtonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLow+ButtonFunctions.swift"; sourceTree = "<group>"; };
 		D86EFE782B626A2B00D2A4AE /* High or Low.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High or Low.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		D86F04912B8CD18000BA03BC /* MinesVC+UIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesVC+UIFunctions.swift"; sourceTree = "<group>"; };
 		D86F04932B8CD26500BA03BC /* MinesVC+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesVC+Functions.swift"; sourceTree = "<group>"; };
 		D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+UIElements.swift"; sourceTree = "<group>"; };
+		D89B38012B84FEAA00AEFC34 /* Profiler+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profiler+UIElements.swift"; sourceTree = "<group>"; };
 		D89B38032B86211A00AEFC34 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
 		D89B38052B8621E800AEFC34 /* Fredoka-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fredoka-Bold.ttf"; sourceTree = "<group>"; };
 		D89B38072B86280A00AEFC34 /* Medinah.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Medinah.ttf; sourceTree = "<group>"; };
@@ -69,8 +71,8 @@
 		D89B380C2B864BBC00AEFC34 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D89B380E2B864BD700AEFC34 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D8AAC0E92B7F5D4B002B9A56 /* HighLowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighLowViewController.swift; sourceTree = "<group>"; };
-		D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+Functions.swift"; sourceTree = "<group>"; };
-		D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+UIElements.swift"; sourceTree = "<group>"; };
+		D8AAC0EC2B7F903C002B9A56 /* HighLow+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLow+Functions.swift"; sourceTree = "<group>"; };
+		D8AAC0EE2B7F9081002B9A56 /* HighLow+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLow+UIElements.swift"; sourceTree = "<group>"; };
 		D8AAC0F02B7F9430002B9A56 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D8CE66472B73AF6300D0E4EC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D8CE66492B73B50500D0E4EC /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
@@ -176,7 +178,7 @@
 		D89B38002B84FE8D00AEFC34 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */,
+				D89B38012B84FEAA00AEFC34 /* Profiler+UIElements.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,9 +196,10 @@
 		D8AAC0EB2B7F9023002B9A56 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */,
-				D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */,
-				D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */,
+				D8AAC0EC2B7F903C002B9A56 /* HighLow+Functions.swift */,
+				D8AAC0EE2B7F9081002B9A56 /* HighLow+UIElements.swift */,
+				D8372AC12B879A9F0008D7EE /* HighLow+CollectionView.swift */,
+				D8534DD72B9605540042FD80 /* HighLow+ButtonFunctions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,18 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8372AC22B879A9F0008D7EE /* HighLowViewController+CollectionView.swift in Sources */,
+				D8372AC22B879A9F0008D7EE /* HighLow+CollectionView.swift in Sources */,
 				D86F04942B8CD26500BA03BC /* MinesVC+Functions.swift in Sources */,
 				D89B380D2B864BBC00AEFC34 /* UIViewController+Extensions.swift in Sources */,
-				D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */,
+				D8AAC0ED2B7F903C002B9A56 /* HighLow+Functions.swift in Sources */,
 				D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */,
-				D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */,
+				D8AAC0EF2B7F9081002B9A56 /* HighLow+UIElements.swift in Sources */,
 				D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */,
-				D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */,
+				D89B38022B84FEAA00AEFC34 /* Profiler+UIElements.swift in Sources */,
 				D86F04922B8CD18000BA03BC /* MinesVC+UIFunctions.swift in Sources */,
 				D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */,
 				D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */,
 				D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */,
+				D8534DD82B9605540042FD80 /* HighLow+ButtonFunctions.swift in Sources */,
 				D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */,
 				D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */,
 				D8AAC0EA2B7F5D4B002B9A56 /* HighLowViewController.swift in Sources */,
