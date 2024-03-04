@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D83231AE2B8F2DF600F5DF83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83231AD2B8F2DF600F5DF83 /* UIColor+Extension.swift */; };
 		D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */; };
 		D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372ABE2B8769F30008D7EE /* CardsCell.swift */; };
 		D8372AC22B879A9F0008D7EE /* HighLowViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */; };
 		D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7B2B626A2B00D2A4AE /* AppDelegate.swift */; };
 		D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */; };
 		D86EFE852B626A3200D2A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86EFE842B626A3200D2A4AE /* Assets.xcassets */; };
+		D86F04902B8C97BB00BA03BC /* MinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F048F2B8C97BB00BA03BC /* MinesViewController.swift */; };
+		D86F04922B8CD18000BA03BC /* MinesVC+UIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F04912B8CD18000BA03BC /* MinesVC+UIFunctions.swift */; };
+		D86F04942B8CD26500BA03BC /* MinesVC+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F04932B8CD26500BA03BC /* MinesVC+Functions.swift */; };
 		D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */; };
 		D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */; };
 		D89B38042B86211B00AEFC34 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89B38032B86211A00AEFC34 /* Fredoka.ttf */; };
@@ -25,12 +29,25 @@
 		D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */; };
 		D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */; };
 		D8AAC0F12B7F9430002B9A56 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AAC0F02B7F9430002B9A56 /* Colors.xcassets */; };
-		D8B4FC672B7B97E80024EAAB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */; };
 		D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE66472B73AF6300D0E4EC /* UserModel.swift */; };
 		D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE66492B73B50500D0E4EC /* UserDatabase.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		D8F0A7662B8CEABB004B403D /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
+		D83231AD2B8F2DF600F5DF83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbailtyModel.swift; sourceTree = "<group>"; };
 		D8372ABE2B8769F30008D7EE /* CardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCell.swift; sourceTree = "<group>"; };
 		D8372AC12B879A9F0008D7EE /* HighLowViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -40,6 +57,9 @@
 		D86EFE7D2B626A2B00D2A4AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D86EFE842B626A3200D2A4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D86EFE892B626A3200D2A4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86F048F2B8C97BB00BA03BC /* MinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesViewController.swift; sourceTree = "<group>"; };
+		D86F04912B8CD18000BA03BC /* MinesVC+UIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesVC+UIFunctions.swift"; sourceTree = "<group>"; };
+		D86F04932B8CD26500BA03BC /* MinesVC+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesVC+Functions.swift"; sourceTree = "<group>"; };
 		D89B37FE2B84F69000AEFC34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D89B38012B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+UIElements.swift"; sourceTree = "<group>"; };
 		D89B38032B86211A00AEFC34 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
@@ -52,7 +72,6 @@
 		D8AAC0EC2B7F903C002B9A56 /* HighLowViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+Functions.swift"; sourceTree = "<group>"; };
 		D8AAC0EE2B7F9081002B9A56 /* HighLowViewController+UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighLowViewController+UIElements.swift"; sourceTree = "<group>"; };
 		D8AAC0F02B7F9430002B9A56 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D8CE66472B73AF6300D0E4EC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D8CE66492B73B50500D0E4EC /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,11 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D81806772B91D708004346F9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D86F04932B8CD26500BA03BC /* MinesVC+Functions.swift */,
+				D86F04912B8CD18000BA03BC /* MinesVC+UIFunctions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D8372ABB2B87416A0008D7EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				D89B380C2B864BBC00AEFC34 /* UIViewController+Extensions.swift */,
 				D89B380E2B864BD700AEFC34 /* UIView+Extension.swift */,
+				D83231AD2B8F2DF600F5DF83 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,11 +150,18 @@
 				D8B4FC602B7B95ED0024EAAB /* Resources */,
 				D8B4FC5F2B7B95CA0024EAAB /* Supporting Files */,
 				D8372ABB2B87416A0008D7EE /* Extensions */,
-				D8B4FC662B7B97E80024EAAB /* CoreDataStack.swift */,
-				D8CE66492B73B50500D0E4EC /* UserDatabase.swift */,
 				D86EFE892B626A3200D2A4AE /* Info.plist */,
 			);
 			path = "High or Low";
+			sourceTree = "<group>";
+		};
+		D86F048E2B8C97AA00BA03BC /* MinesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D86F048F2B8C97BB00BA03BC /* MinesViewController.swift */,
+				D81806772B91D708004346F9 /* Extension */,
+			);
+			path = MinesViewController;
 			sourceTree = "<group>";
 		};
 		D89B37FD2B84F5DE00AEFC34 /* ProfileViewController */ = {
@@ -169,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CE66472B73AF6300D0E4EC /* UserModel.swift */,
+				D8CE66492B73B50500D0E4EC /* UserDatabase.swift */,
 				D8372ABC2B8745260008D7EE /* ProbailtyModel.swift */,
 			);
 			path = Model;
@@ -177,6 +214,7 @@
 		D8B4FC5E2B7B5D9D0024EAAB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D86F048E2B8C97AA00BA03BC /* MinesViewController */,
 				D89B37FD2B84F5DE00AEFC34 /* ProfileViewController */,
 				D8AAC0E82B7F5D27002B9A56 /* HighLowViewController */,
 			);
@@ -214,6 +252,7 @@
 				D86EFE762B626A2B00D2A4AE /* Resources */,
 			);
 			buildRules = (
+				D8F0A7662B8CEABB004B403D /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -277,20 +316,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8372AC22B879A9F0008D7EE /* HighLowViewController+CollectionView.swift in Sources */,
+				D86F04942B8CD26500BA03BC /* MinesVC+Functions.swift in Sources */,
 				D89B380D2B864BBC00AEFC34 /* UIViewController+Extensions.swift in Sources */,
 				D8AAC0ED2B7F903C002B9A56 /* HighLowViewController+Functions.swift in Sources */,
 				D89B37FF2B84F69000AEFC34 /* ProfileViewController.swift in Sources */,
 				D8AAC0EF2B7F9081002B9A56 /* HighLowViewController+UIElements.swift in Sources */,
 				D8372ABD2B8745260008D7EE /* ProbailtyModel.swift in Sources */,
 				D89B38022B84FEAA00AEFC34 /* ProfileViewController+UIElements.swift in Sources */,
+				D86F04922B8CD18000BA03BC /* MinesVC+UIFunctions.swift in Sources */,
 				D8372ABF2B8769F40008D7EE /* CardsCell.swift in Sources */,
 				D86EFE7C2B626A2B00D2A4AE /* AppDelegate.swift in Sources */,
-				D8B4FC672B7B97E80024EAAB /* CoreDataStack.swift in Sources */,
 				D86EFE7E2B626A2B00D2A4AE /* SceneDelegate.swift in Sources */,
 				D8CE664A2B73B50500D0E4EC /* UserDatabase.swift in Sources */,
 				D8CE66482B73AF6400D0E4EC /* UserModel.swift in Sources */,
 				D8AAC0EA2B7F5D4B002B9A56 /* HighLowViewController.swift in Sources */,
 				D89B380F2B864BD700AEFC34 /* UIView+Extension.swift in Sources */,
+				D86F04902B8C97BB00BA03BC /* MinesViewController.swift in Sources */,
+				D83231AE2B8F2DF600F5DF83 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

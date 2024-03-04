@@ -8,6 +8,7 @@
 import UIKit
 
 class HighLowViewController: UIViewController {
+    // MARK: - UI ELEMENTS
     let navbar: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -152,7 +153,7 @@ class HighLowViewController: UIViewController {
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-    
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
@@ -279,7 +280,6 @@ class HighLowViewController: UIViewController {
         ProbailtyModel(higher: 15, lower: 85),
         ProbailtyModel(higher: 8, lower: 92),
     ]
-    
     var cardsArray: [String] = []
     
     // MARK: - Variables

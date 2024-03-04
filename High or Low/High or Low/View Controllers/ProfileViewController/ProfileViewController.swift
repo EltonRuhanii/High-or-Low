@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
         appendUIElements()
     }
     
-    @objc func logoTapped() {
+    @objc func goToHome() {
         self.navigationController?.popViewController(animated: true)
     }
 }
